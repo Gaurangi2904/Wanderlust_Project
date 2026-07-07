@@ -1,0 +1,130 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+
+        <h3>Create a New Listing</h3>
+
+        <form action="/listings" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+
+            <div class="mb-3">
+                <label class="form-label">Title</label>
+                <input
+                    type="text"
+                    name="listing[title]"
+                    class="form-control"
+                    required
+                >
+                <div class="invalid-feedback">
+                    Please enter a title.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Description</label>
+                <textarea
+                    name="listing[description]"
+                    class="form-control"
+                    rows="4"
+                    required
+                ></textarea>
+                <div class="invalid-feedback">
+                    Please enter description.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Upload Image</label>
+                <input
+                    type="file"
+                    name="listing[image]"
+                    class="form-control"
+                    accept="image/*"
+                    required
+                >
+                <div class="invalid-feedback">
+                    Please upload an image.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Price</label>
+                <input
+                    type="number"
+                    name="listing[price]"
+                    class="form-control"
+                    required
+                >
+                <div class="invalid-feedback">
+                    Please enter price.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Country</label>
+                <input
+                    type="text"
+                    name="listing[country]"
+                    class="form-control"
+                    required
+                >
+                <div class="invalid-feedback">
+                    Please enter country.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Location</label>
+                <input
+                    type="text"
+                    name="listing[location]"
+                    class="form-control"
+                    required
+                >
+                <div class="invalid-feedback">
+                    Please enter location.
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Latitude</label>
+                    <input
+                        type="number"
+                        step="any"
+                        name="listing[latitude]"
+                        class="form-control"
+                        required
+                    >
+                    <div class="invalid-feedback">
+                        Please enter latitude.
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Longitude</label>
+                    <input
+                        type="number"
+                        step="any"
+                        name="listing[longitude]"
+                        class="form-control"
+                        required
+                    >
+                    <div class="invalid-feedback">
+                        Please enter longitude.
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="btn btn-dark">
+                Add Listing
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+<script src="/js/script.js"></script>
